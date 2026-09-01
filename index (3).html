@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eniola Adeniyi — Social Media Manager &amp; Digital Communications Strategist</title>
+<meta name="description" content="Eniola Oluwapelumi Adeniyi — social media &amp; digital communications professional with 4+ years of experience turning engagement into measurable business growth." />
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['"Inter"', 'sans-serif'],
+        },
+        colors: {
+          pearl: '#F1F3F5',
+          paper: '#F8F9FA',
+          sky: '#4A90E2',
+          skydeep: '#2E6DB4',
+          dusty: '#7FA1C3',
+          dustylight: '#B7CCE0',
+          ink: '#1C2733',
+        },
+      },
+    },
+  };
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; color: #1C2733; }
+  h1, h2, h3, .font-display { font-family: 'Space Grotesk', sans-serif; }
+
+  ::selection { background: #4A90E2; color: #ffffff; }
+
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid #4A90E2;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+  .grain-orb { filter: blur(70px); }
+
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -6px;
+    height: 1px;
+    background: #4A90E2;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+  .nav-link:hover::after { transform: scaleX(1); }
+
+  .stat-cell + .stat-cell { border-left: 1px solid rgba(127,161,195,0.35); }
+  @media (max-width: 767px) {
+    .stat-cell + .stat-cell { border-left: none; border-top: 1px solid rgba(127,161,195,0.35); }
+  }
+
+  .case-card { transition: transform 0.35s cubic-bezier(.2,.8,.2,1), box-shadow 0.35s ease; }
+  .case-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -20px rgba(46,109,180,0.35); }
+
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  .kpi-num { font-variant-numeric: tabular-nums; }
+
+  .placeholder-note { border: 1px dashed rgba(127,161,195,0.6); }
+
+  .logo-strip {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+</style>
+</head>
+
+<body class="antialiased">
+
+<!-- ============ NAVBAR ============ -->
+<header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-paper/80 backdrop-blur-md border-b border-dusty/20">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+    <a href="#top" class="font-display text-xl font-semibold tracking-tight text-ink">
+      Eniola Adeniyi<span class="text-sky">.</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-10 font-display text-sm font-medium text-ink/80">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <a href="#contact" class="hidden md:inline-flex items-center gap-2 bg-ink text-white font-display text-sm font-medium px-5 py-2.5 rounded-full hover:bg-skydeep transition-colors duration-300">
+      Book a Call
+      <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+    </a>
+
+    <button id="menu-btn" aria-label="Open menu" aria-expanded="false" class="md:hidden p-2 text-ink">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="md:hidden hidden border-t border-dusty/20 bg-paper">
+    <ul class="flex flex-col px-6 py-4 gap-4 font-display text-base text-ink">
+      <li><a href="#about" class="mobile-link block py-1">About</a></li>
+      <li><a href="#services" class="mobile-link block py-1">Services</a></li>
+      <li><a href="#case-studies" class="mobile-link block py-1">Case Studies</a></li>
+      <li><a href="#contact" class="mobile-link block py-1">Contact</a></li>
+      <li><a href="#contact" class="mobile-link inline-flex w-fit items-center gap-2 bg-ink text-white text-sm font-medium px-5 py-2.5 rounded-full mt-2">Book a Call <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="relative overflow-hidden pt-40 pb-20 lg:pt-48">
+  <div class="grain-orb absolute -top-24 -right-40 w-[32rem] h-[32rem] rounded-full bg-sky/25 pointer-events-none"></div>
+  <div class="grain-orb absolute top-40 -left-32 w-80 h-80 rounded-full bg-dustylight/40 pointer-events-none"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center">
+
+    <div class="lg:col-span-7">
+      <p class="font-display text-sm font-medium text-skydeep mb-6">Social Media &amp; Digital Communications</p>
+
+      <h1 class="font-display text-[2.4rem] leading-[1.1] sm:text-5xl lg:text-[3.6rem] lg:leading-[1.08] font-semibold text-ink max-w-2xl">
+        Turning social metrics into business growth
+      </h1>
+
+      <p class="mt-8 text-lg text-ink/70 max-w-xl leading-relaxed">
+        I'm Eniola Adeniyi — a social media manager with 4+ years of experience developing and executing strategies that increase brand visibility, drive lead generation, and grow customer acquisition, backed by data at every step.
+      </p>
+
+      <div class="mt-10 flex flex-wrap items-center gap-4">
+        <a href="#contact" class="inline-flex items-center gap-2 bg-sky text-white font-display font-medium px-7 py-3.5 rounded-full hover:bg-skydeep transition-colors duration-300 shadow-lg shadow-sky/25">
+          Book a Discovery Call
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+        </a>
+        <a href="#case-studies" class="inline-flex items-center gap-2 border border-ink/20 text-ink font-display font-medium px-7 py-3.5 rounded-full hover:border-ink hover:bg-white transition-colors duration-300">
+          View Case Studies
+        </a>
+      </div>
+
+      <div class="mt-12 flex items-center gap-3 text-sm text-ink/50">
+        <i data-lucide="map-pin" class="w-4 h-4"></i>
+        Lagos, Nigeria — working with brands across Africa, the UK, and beyond
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="relative max-w-sm mx-auto">
+        <div class="absolute -inset-4 rounded-[2rem] bg-dustylight/40 -z-10"></div>
+        <div class="aspect-[4/5] rounded-[1.75rem] overflow-hidden ring-1 ring-dusty/20 shadow-xl shadow-dusty/20">
+          <img src="images/portrait-2.jpg" alt="Eniola Adeniyi, social media manager and digital communications strategist" class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-lg shadow-dusty/20 px-5 py-4 border border-dusty/15">
+          <p class="font-display text-2xl font-semibold text-skydeep">4+ yrs</p>
+          <p class="text-xs text-ink/60">strategic campaigns</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ IMPACT METRICS RIBBON ============ -->
+<section aria-label="Core impact metrics" class="relative bg-ink mt-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid grid-cols-2 md:grid-cols-4">
+
+      <div class="stat-cell py-10 px-4 md:px-8 text-center md:text-left">
+        <p class="kpi-num font-display text-4xl sm:text-5xl font-semibold text-sky">+35%</p>
+        <p class="mt-2 text-sm text-white/60">Social Media Engagement</p>
+      </div>
+
+      <div class="stat-cell py-10 px-4 md:px-8 text-center md:text-left">
+        <p class="kpi-num font-display text-4xl sm:text-5xl font-semibold text-sky">+60%</p>
+        <p class="mt-2 text-sm text-white/60">Content Views</p>
+      </div>
+
+      <div class="stat-cell py-10 px-4 md:px-8 text-center md:text-left">
+        <p class="kpi-num font-display text-4xl sm:text-5xl font-semibold text-sky">+35%</p>
+        <p class="mt-2 text-sm text-white/60">Lead Generation Growth</p>
+      </div>
+
+      <div class="stat-cell py-10 px-4 md:px-8 text-center md:text-left">
+        <p class="kpi-num font-display text-4xl sm:text-5xl font-semibold text-sky">+65%</p>
+        <p class="mt-2 text-sm text-white/60">Brand Awareness Improvement</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-28 lg:py-36 bg-paper">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-16 items-center">
+
+    <div class="lg:col-span-5 reveal">
+      <div class="relative max-w-md mx-auto lg:mx-0">
+        <div class="absolute -inset-4 rounded-[2rem] bg-dustylight/40 -z-10"></div>
+        <div class="aspect-[4/5] rounded-[1.75rem] overflow-hidden ring-1 ring-dusty/20 shadow-xl shadow-dusty/20">
+          <img src="images/portrait-1.jpg" alt="Portrait of Eniola Adeniyi" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-lg shadow-dusty/20 px-5 py-4 border border-dusty/15">
+          <p class="font-display text-2xl font-semibold text-skydeep">300+</p>
+          <p class="text-xs text-ink/60">branded videos produced</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7 reveal">
+      <p class="font-display text-sm font-medium text-skydeep mb-4">About</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-ink leading-tight max-w-xl">
+        Data-informed strategy, built for how people actually scroll, click, and buy
+      </h2>
+
+      <div class="mt-8 space-y-5 text-ink/70 leading-relaxed max-w-xl">
+        <p>I'm a results-driven social media and digital communications professional with 4+ years of experience developing and executing social media strategies that increase brand visibility, audience engagement, lead generation, and customer acquisition.</p>
+        <p>I've delivered a 35% increase in social media engagement, 60% growth in content views, 35% growth in lead generation, and 65% improvement in brand awareness through data-informed content and paid social strategies — working across social strategy, content development, community management, paid advertising, campaign analytics, audience targeting, influencer marketing, and cross-functional collaboration.</p>
+        <p>Currently Head of Social Media at EvolveUpCo, where I lead social and digital marketing strategy for clients across multiple industries — translating business objectives into content, audience growth, engagement, and conversion.</p>
+      </div>
+
+      <div class="mt-10 flex flex-wrap gap-3">
+        <span class="px-4 py-2 rounded-full bg-white border border-dusty/25 text-sm text-ink/75">Social Media Strategy</span>
+        <span class="px-4 py-2 rounded-full bg-white border border-dusty/25 text-sm text-ink/75">Content Development</span>
+        <span class="px-4 py-2 rounded-full bg-white border border-dusty/25 text-sm text-ink/75">Community Management</span>
+        <span class="px-4 py-2 rounded-full bg-white border border-dusty/25 text-sm text-ink/75">Paid Advertising</span>
+        <span class="px-4 py-2 rounded-full bg-white border border-dusty/25 text-sm text-ink/75">Campaign Analytics</span>
+        <span class="px-4 py-2 rounded-full bg-white border border-dusty/25 text-sm text-ink/75">Audience Targeting</span>
+        <span class="px-4 py-2 rounded-full bg-white border border-dusty/25 text-sm text-ink/75">Influencer Marketing</span>
+        <span class="px-4 py-2 rounded-full bg-white border border-dusty/25 text-sm text-ink/75">Cross-Functional Collaboration</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="py-28 lg:py-36 bg-pearl">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl reveal">
+      <p class="font-display text-sm font-medium text-skydeep mb-4">Services</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-ink leading-tight">
+        Full-funnel support, from first impression to closed customer
+      </h2>
+    </div>
+
+    <div class="mt-16 grid sm:grid-cols-2 gap-px bg-dusty/20 rounded-2xl overflow-hidden border border-dusty/20 reveal">
+
+      <div class="bg-white p-9 hover:bg-paper transition-colors duration-300">
+        <div class="w-12 h-12 rounded-xl bg-sky/10 flex items-center justify-center mb-6">
+          <i data-lucide="line-chart" class="w-6 h-6 text-sky"></i>
+        </div>
+        <h3 class="font-display text-xl font-semibold text-ink mb-3">Social Strategy &amp; Analytics</h3>
+        <p class="text-ink/65 leading-relaxed">Data-informed roadmaps, content calendars, and KPI tracking that turn audience insights into performance reporting leadership can act on.</p>
+      </div>
+
+      <div class="bg-white p-9 hover:bg-paper transition-colors duration-300">
+        <div class="w-12 h-12 rounded-xl bg-sky/10 flex items-center justify-center mb-6">
+          <i data-lucide="pen-line" class="w-6 h-6 text-sky"></i>
+        </div>
+        <h3 class="font-display text-xl font-semibold text-ink mb-3">Content Development &amp; Copywriting</h3>
+        <p class="text-ink/65 leading-relaxed">Platform-native content — short-form video, graphics, and copy — produced and edited end-to-end using CapCut and Canva.</p>
+      </div>
+
+      <div class="bg-white p-9 hover:bg-paper transition-colors duration-300">
+        <div class="w-12 h-12 rounded-xl bg-sky/10 flex items-center justify-center mb-6">
+          <i data-lucide="target" class="w-6 h-6 text-sky"></i>
+        </div>
+        <h3 class="font-display text-xl font-semibold text-ink mb-3">Paid Advertising &amp; Targeting</h3>
+        <p class="text-ink/65 leading-relaxed">High-ROI paid social campaigns built on precise audience targeting, continuous testing, and conversion-focused optimization.</p>
+      </div>
+
+      <div class="bg-white p-9 hover:bg-paper transition-colors duration-300">
+        <div class="w-12 h-12 rounded-xl bg-sky/10 flex items-center justify-center mb-6">
+          <i data-lucide="users" class="w-6 h-6 text-sky"></i>
+        </div>
+        <h3 class="font-display text-xl font-semibold text-ink mb-3">Community &amp; Influencer Marketing</h3>
+        <p class="text-ink/65 leading-relaxed">Day-to-day community management and influencer partnerships that build authentic brand loyalty and word-of-mouth growth.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE STUDIES ============ -->
+<section id="case-studies" class="py-28 lg:py-36 bg-paper">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl reveal">
+      <p class="font-display text-sm font-medium text-skydeep mb-4">Case Studies</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-ink leading-tight">
+        Selected work, tied to the numbers that mattered
+      </h2>
+      <p class="mt-4 text-ink/60 text-sm">Cards with a dashed border are placeholders — swap in project imagery and final metrics as each write-up is ready.</p>
+    </div>
+
+    <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+
+      <!-- Case 1: Style Space Africa (real metrics) -->
+      <article class="case-card bg-white rounded-2xl overflow-hidden border border-dusty/15 shadow-sm shadow-dusty/10">
+        <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-sky/25 via-dustylight/40 to-pearl flex items-center justify-center">
+          <i data-lucide="shirt" class="w-12 h-12 text-skydeep/50"></i>
+          <span class="absolute top-4 left-4 bg-white/95 backdrop-blur text-ink text-xs font-display font-medium px-3 py-1.5 rounded-full">Instagram · Fashion &amp; Lifestyle</span>
+        </div>
+        <div class="p-7">
+          <h3 class="font-display text-lg font-semibold text-ink mb-2">Style Space Africa</h3>
+          <p class="text-ink/65 text-sm leading-relaxed mb-5">As Social Media Manager, rebuilt content strategy and paid campaigns for this fashion &amp; lifestyle brand — pairing short-form video with targeted content marketing to move followers toward purchase.</p>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 text-skydeep font-display font-semibold text-sm">
+            <span class="flex items-center gap-1.5"><i data-lucide="trending-up" class="w-4 h-4"></i>+35% engagement</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="trending-up" class="w-4 h-4"></i>+60% content views</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="trending-up" class="w-4 h-4"></i>+65% brand awareness</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 2: EvolveUpCo (real metric) -->
+      <article class="case-card bg-white rounded-2xl overflow-hidden border border-dusty/15 shadow-sm shadow-dusty/10">
+        <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-sky/25 via-dustylight/40 to-pearl flex items-center justify-center">
+          <i data-lucide="shopping-bag" class="w-12 h-12 text-skydeep/50"></i>
+          <span class="absolute top-4 left-4 bg-white/95 backdrop-blur text-ink text-xs font-display font-medium px-3 py-1.5 rounded-full">Jiji &amp; Jumia · E-commerce</span>
+        </div>
+        <div class="p-7">
+          <h3 class="font-display text-lg font-semibold text-ink mb-2">EvolveUpCo — E-commerce Optimization</h3>
+          <p class="text-ink/65 text-sm leading-relaxed mb-5">Launched and optimized client product listings across Jiji and Jumia with SEO-driven descriptions and improved presentation, alongside influencer and short-form video support.</p>
+          <div class="flex items-center gap-2 text-skydeep font-display font-semibold text-sm">
+            <i data-lucide="trending-up" class="w-4 h-4"></i>
+            +50% revenue increase
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 3: Glow Haven Skincare (placeholder) -->
+      <article class="case-card placeholder-note bg-white rounded-2xl overflow-hidden">
+        <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-dustylight/50 to-pearl flex items-center justify-center">
+          <i data-lucide="droplet" class="w-12 h-12 text-dusty"></i>
+          <span class="absolute top-4 left-4 bg-white/95 backdrop-blur text-ink text-xs font-display font-medium px-3 py-1.5 rounded-full">Instagram · Skincare</span>
+        </div>
+        <div class="p-7">
+          <h3 class="font-display text-lg font-semibold text-ink mb-2">Glow Haven Skincare</h3>
+          <p class="text-ink/65 text-sm leading-relaxed mb-5">Goal: build brand visibility and trust with an ingredient-conscious audience, driving bundle sales through education, UGC, and influencer social proof.</p>
+          <div class="flex items-center gap-2 text-ink/40 font-display font-medium text-sm italic">
+            <i data-lucide="pencil" class="w-4 h-4"></i>
+            Results — add final metrics here
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 4: Suave Fashion (placeholder) -->
+      <article class="case-card placeholder-note bg-white rounded-2xl overflow-hidden">
+        <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-dustylight/50 to-pearl flex items-center justify-center">
+          <i data-lucide="scissors" class="w-12 h-12 text-dusty"></i>
+          <span class="absolute top-4 left-4 bg-white/95 backdrop-blur text-ink text-xs font-display font-medium px-3 py-1.5 rounded-full">Instagram · Fashion</span>
+        </div>
+        <div class="p-7">
+          <h3 class="font-display text-lg font-semibold text-ink mb-2">Suave Fashion</h3>
+          <p class="text-ink/65 text-sm leading-relaxed mb-5">Goal: position a modern African fashion label as a leader among Lagos-based professionals, using lookbooks, behind-the-scenes tailoring content, and client stories.</p>
+          <div class="flex items-center gap-2 text-ink/40 font-display font-medium text-sm italic">
+            <i data-lucide="pencil" class="w-4 h-4"></i>
+            Results — add final metrics here
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 5: Brew Haus Café (placeholder) -->
+      <article class="case-card placeholder-note bg-white rounded-2xl overflow-hidden">
+        <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-dustylight/50 to-pearl flex items-center justify-center">
+          <i data-lucide="coffee" class="w-12 h-12 text-dusty"></i>
+          <span class="absolute top-4 left-4 bg-white/95 backdrop-blur text-ink text-xs font-display font-medium px-3 py-1.5 rounded-full">Instagram · TikTok · Café</span>
+        </div>
+        <div class="p-7">
+          <h3 class="font-display text-lg font-semibold text-ink mb-2">Brew Haus Café</h3>
+          <p class="text-ink/65 text-sm leading-relaxed mb-5">Goal: drive more in-store visits and online buzz among young professionals and creatives through ambience, community, and menu-led content.</p>
+          <div class="flex items-center gap-2 text-ink/40 font-display font-medium text-sm italic">
+            <i data-lucide="pencil" class="w-4 h-4"></i>
+            Results — add final metrics here
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 6: Keridam (placeholder) -->
+      <article class="case-card placeholder-note bg-white rounded-2xl overflow-hidden">
+        <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-dustylight/50 to-pearl flex items-center justify-center">
+          <i data-lucide="layout-template" class="w-12 h-12 text-dusty"></i>
+          <span class="absolute top-4 left-4 bg-white/95 backdrop-blur text-ink text-xs font-display font-medium px-3 py-1.5 rounded-full">Content &amp; Brand · UK</span>
+        </div>
+        <div class="p-7">
+          <h3 class="font-display text-lg font-semibold text-ink mb-2">Keridam</h3>
+          <p class="text-ink/65 text-sm leading-relaxed mb-5">Built reusable branded content templates and cross-market visual communications for a Manchester-based community platform, improving workflow efficiency and brand consistency.</p>
+          <div class="flex items-center gap-2 text-ink/40 font-display font-medium text-sm italic">
+            <i data-lucide="pencil" class="w-4 h-4"></i>
+            Results — add final metrics here
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section aria-label="Client testimonials" class="py-24 bg-pearl">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center">
+
+    <div class="lg:col-span-4 reveal">
+      <div class="relative max-w-xs mx-auto lg:mx-0">
+        <div class="aspect-[4/5] rounded-[1.5rem] overflow-hidden ring-1 ring-dusty/20 shadow-lg shadow-dusty/20">
+          <img src="images/portrait-3.jpg" alt="Eniola Adeniyi smiling" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-8 reveal">
+      <p class="font-display text-sm font-medium text-skydeep mb-6">What clients say</p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <blockquote class="bg-white rounded-2xl p-6 border border-dusty/15">
+          <i data-lucide="quote" class="w-5 h-5 text-sky mb-3"></i>
+          <p class="text-ink/75 text-sm leading-relaxed">Working with Eniola was seamless. Her consistency, creativity, and strategic insights helped elevate our brand presence.</p>
+          <p class="mt-4 text-xs font-display font-medium text-ink/50">Mr. Olalekan</p>
+        </blockquote>
+        <blockquote class="bg-white rounded-2xl p-6 border border-dusty/15">
+          <i data-lucide="quote" class="w-5 h-5 text-sky mb-3"></i>
+          <p class="text-ink/75 text-sm leading-relaxed">She doesn't just create content; she builds a brand story. Every idea is backed by strategy.</p>
+          <p class="mt-4 text-xs font-display font-medium text-ink/50">Moshood Adeola</p>
+        </blockquote>
+        <blockquote class="bg-white rounded-2xl p-6 border border-dusty/15">
+          <i data-lucide="quote" class="w-5 h-5 text-sky mb-3"></i>
+          <p class="text-ink/75 text-sm leading-relaxed">Eniola has an incredible eye for detail and storytelling. She helped streamline our content strategy and improve engagement.</p>
+          <p class="mt-4 text-xs font-display font-medium text-ink/50">Angela O.</p>
+        </blockquote>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ CLIENTS ============ -->
+<section aria-label="Clients" class="py-16 bg-paper border-y border-dusty/15">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <p class="text-center text-sm text-ink/50 font-display mb-8">Clients I've worked with</p>
+    <div class="logo-strip flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-ink/40 font-display font-medium text-sm sm:text-base">
+      <span>Style Space</span>
+      <span>Issy</span>
+      <span>Blossom Mind Concept</span>
+      <span>The Grace Ola's</span>
+      <span>AADE</span>
+      <span>Technatic Hub</span>
+      <span>Gray Hub</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="py-28 lg:py-36 bg-ink relative overflow-hidden">
+  <div class="grain-orb absolute -bottom-32 -left-24 w-96 h-96 rounded-full bg-sky/20 pointer-events-none"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-16">
+
+    <div class="lg:col-span-5">
+      <p class="font-display text-sm font-medium text-dustylight mb-4">Contact</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white leading-tight max-w-md">
+        Let's talk about what growth looks like for your brand
+      </h2>
+      <p class="mt-6 text-white/60 leading-relaxed max-w-md">
+        Tell me a little about your brand and where you'd like your social and digital presence to go. I reply within one business day.
+      </p>
+
+      <div class="mt-10 space-y-4 text-white/70">
+        <a href="mailto:ennieadeniyi@gmail.com" class="flex items-center gap-3 hover:text-white transition-colors">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          ennieadeniyi@gmail.com
+        </a>
+        <a href="tel:+2348116999665" class="flex items-center gap-3 hover:text-white transition-colors">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          +234 811 699 9665
+        </a>
+        <p class="flex items-center gap-3">
+          <i data-lucide="map-pin" class="w-4 h-4"></i>
+          Lagos, Nigeria — available for remote work
+        </p>
+      </div>
+
+      <div class="mt-10 flex items-center gap-4">
+        <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white/50 transition-colors">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
+        </a>
+        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white/50 transition-colors">
+          <i data-lucide="instagram" class="w-4 h-4"></i>
+        </a>
+        <a href="#" aria-label="TikTok" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white/50 transition-colors">
+          <i data-lucide="music-2" class="w-4 h-4"></i>
+        </a>
+        <a href="#" aria-label="YouTube" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white/50 transition-colors">
+          <i data-lucide="youtube" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <form id="contact-form" class="bg-white rounded-2xl p-8 sm:p-10 shadow-2xl shadow-black/30" novalidate>
+
+        <div id="form-success" class="hidden mb-6 flex items-start gap-3 bg-sky/10 border border-sky/30 text-skydeep rounded-xl px-4 py-3 text-sm">
+          <i data-lucide="check-circle-2" class="w-5 h-5 shrink-0 mt-0.5"></i>
+          <span>Thanks — your message has been sent. I'll follow up within one business day.</span>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-ink/70 mb-2">Name</label>
+            <input type="text" id="name" name="name" required
+              class="w-full rounded-xl border border-dusty/30 bg-paper px-4 py-3 text-ink placeholder:text-ink/30 focus:border-sky focus:ring-0 transition-colors"
+              placeholder="Jordan Smith" />
+            <p class="hidden field-error text-xs text-red-500 mt-1.5">Please enter your name.</p>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-ink/70 mb-2">Email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full rounded-xl border border-dusty/30 bg-paper px-4 py-3 text-ink placeholder:text-ink/30 focus:border-sky focus:ring-0 transition-colors"
+              placeholder="jordan@brand.com" />
+            <p class="hidden field-error text-xs text-red-500 mt-1.5">Please enter a valid email.</p>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <label for="website" class="block text-sm font-medium text-ink/70 mb-2">Brand Website</label>
+          <input type="text" id="website" name="website"
+            class="w-full rounded-xl border border-dusty/30 bg-paper px-4 py-3 text-ink placeholder:text-ink/30 focus:border-sky focus:ring-0 transition-colors"
+            placeholder="yourbrand.com" />
+        </div>
+
+        <div class="mt-6">
+          <label for="message" class="block text-sm font-medium text-ink/70 mb-2">Message</label>
+          <textarea id="message" name="message" rows="4" required
+            class="w-full rounded-xl border border-dusty/30 bg-paper px-4 py-3 text-ink placeholder:text-ink/30 focus:border-sky focus:ring-0 transition-colors resize-none"
+            placeholder="Tell me about your brand and goals..."></textarea>
+          <p class="hidden field-error text-xs text-red-500 mt-1.5">Please add a short message.</p>
+        </div>
+
+        <button type="submit" class="mt-8 w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sky text-white font-display font-medium px-8 py-3.5 rounded-full hover:bg-skydeep transition-colors duration-300">
+          Send Message
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink border-t border-white/10 py-8">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/40">
+    <p>© <span id="year"></span> Eniola Adeniyi. All rights reserved.</p>
+    <p>Social Media Manager · Digital Communications</p>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 12) {
+      nav.classList.add('shadow-md', 'shadow-dusty/10');
+    } else {
+      nav.classList.remove('shadow-md', 'shadow-dusty/10');
+    }
+  });
+
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    menuBtn.innerHTML = isOpen ? '<i data-lucide="menu" class="w-6 h-6"></i>' : '<i data-lucide="x" class="w-6 h-6"></i>';
+    lucide.createIcons();
+  });
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+      lucide.createIcons();
+    });
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+
+  const form = document.getElementById('contact-form');
+  const successBox = document.getElementById('form-success');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let valid = true;
+
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    [nameInput, emailInput, messageInput].forEach(input => {
+      const errorEl = input.closest('div').querySelector('.field-error');
+      const isEmail = input.id === 'email';
+      const isValid = isEmail
+        ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())
+        : input.value.trim().length > 0;
+
+      if (!isValid) {
+        valid = false;
+        input.classList.add('border-red-400');
+        if (errorEl) errorEl.classList.remove('hidden');
+      } else {
+        input.classList.remove('border-red-400');
+        if (errorEl) errorEl.classList.add('hidden');
+      }
+    });
+
+    if (!valid) return;
+
+    successBox.classList.remove('hidden');
+    form.reset();
+    successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+</script>
+
+</body>
+</html>
